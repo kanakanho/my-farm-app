@@ -2,7 +2,7 @@ name: deploy
 
 on:
   push:
-    branches: ['main']
+    branches: ["main"]
   workflow_dispatch:
 
 permissions:
@@ -11,7 +11,7 @@ permissions:
   id-token: write
 
 concurrency:
-  group: 'pages'
+  group: "pages"
   cancel-in-progress: true
 
 jobs:
@@ -23,20 +23,18 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
-          node-version: 18
-          # yarnのキャッシュを効かすために設定 (npmのかたはnpmで)
+          node-version: "20"
           cache: yarn
       - name: yarn install
         run: yarn install
       - name: yarn build
         run: yarn build
-        # GIthubページは https://USERNAME.github.io/REPOSITORY_NAME/
-        # となるので、envを追加してviteのベースパスを変えるように設定します。
         env:
           GITHUB_PAGES: true
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-artifact@v4
         with:
+          name: "github-pages"
           path: ./dist
 
   deploy:
