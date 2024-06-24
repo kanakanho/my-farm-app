@@ -1,0 +1,3 @@
+export const colors = ["R", "YR", "Y", "GY", "G", "BG", "B", "PB", "P", "RP"];
+export const numbers = ["2.5", "5", "7.5", "10"];
+export const colorCodes = ["FF406C","FF4455","FF4B33","FF7C31","FF8B2C","FFAE2B","FFB73C","FFBD28","FFDE34","FFE51D","FEE90C","F2EC4A","E2F10D","D0F629","A1FF2C","10FF29","54FF9B","59FFBD","48FFC9","33FFD4","0FFFDF","5AFEE9","4FFDF6","42DEE4","45DDEE","50DBF9","60D8FF","35BBF4","5EB7F8","1798FB","4137FF","7C17F4","B32CFF","C801F9","F734FE","FF1DE8","FF29C9","FF04AC","FF2896","FF417F"]
